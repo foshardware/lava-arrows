@@ -1,0 +1,60 @@
+name:                lava-arrows
+version:             0.0.0.0
+synopsis:            Kleisli arrows of Lava components and testing
+description:
+
+license:             OtherLicense 
+license-file:        LICENSE
+category:            Hardware
+build-type:          Simple
+cabal-version:       >=1.18
+tested-with:         GHC==7.8.2
+
+Executable           lava
+  hs-source-dirs:    src
+  main-is:           LavaCLI.hs
+  build-depends:     base >= 4.7, arrows, xilinx-lava, transformers,
+                     directory, QuickCheck, Vec
+  ghc-options:       -Wall -O2 -fno-warn-orphans -fno-warn-unused-do-bind
+  default-language:  Haskell2010
+
+Library
+  hs-source-Dirs:    src
+  Build-depends:     base >= 4.7, arrows, xilinx-lava, transformers,
+                     containers, QuickCheck, Vec
+  ghc-options:       -Wall -O2 -fno-warn-orphans -fno-warn-unused-do-bind
+  default-language:  Haskell2010
+  Exposed-Modules:
+    Lava.Arrow
+    Lava.BitVec
+    Lava.Class
+    Lava.Agnostic
+    Lava.Agnostic.Arrow
+    Lava.Agnostic.BLIF
+    Lava.Agnostic.EvalNetlist
+    Lava.Agnostic.ExecCircuit
+    Lava.Agnostic.Gates
+    Lava.Agnostic.Latch
+    Lava.Agnostic.Lutify
+    Lava.Agnostic.Netlist
+    Lava.Agnostic.Optimize
+    Lava.Agnostic.Ports
+    Lava.Agnostic.Primitive
+    Lava.Agnostic.Register
+    Lava.Agnostic.VHDL
+    Lava.QuineMcCluskey
+    Lava.Types
+    Lava.Wire
+    Lava.Xilinx
+    Lava.Xilinx.Arrow
+    Lava.Xilinx.Adder
+    Lava.Xilinx.EvalNetlist
+    Lava.Xilinx.ExecCircuit
+    Lava.Xilinx.Gates
+    Lava.Xilinx.Latch
+    Lava.Xilinx.Register
+    Lava.Xilinx.Subtractor
+    Lava.Xilinx.Lutify
+    Lava.Xilinx.Optimize
+    Lava.Xilinx.Ports
+    Lava.Xilinx.Virtex6

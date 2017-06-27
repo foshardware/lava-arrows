@@ -1,0 +1,43 @@
+.model rot
+.inputs w0 w1
+.outputs w3 w4 w5 w6
+.latch w5 w6 re w26 0
+.latch w4 w5 re w26 1
+.latch w3 w4 re w26 1
+.latch w6 w3 re w26 0
+.jk w1 w1 w25 w26
+.jk w1 w1 w24 w25
+.jk w1 w1 w23 w24
+.jk w1 w1 w22 w23
+.jk w1 w1 w21 w22
+.jk w1 w1 w20 w21
+.jk w1 w1 w19 w20
+.jk w1 w1 w18 w19
+.jk w1 w1 w17 w18
+.jk w1 w1 w16 w17
+.jk w1 w1 w15 w16
+.jk w1 w1 w14 w15
+.jk w1 w1 w13 w14
+.jk w1 w1 w12 w13
+.jk w1 w1 w11 w12
+.jk w1 w1 w10 w11
+.jk w1 w1 w9 w10
+.jk w1 w1 w8 w9
+.jk w1 w1 w7 w8
+.jk w1 w1 w2 w7
+.end
+
+.model jk
+.inputs j kbar clk
+.outputs out
+.latch temp q re clk 1
+.names j k q temp
+-01 1
+1-0 1
+.names q out
+0 1
+.names kbar k
+0 1
+.end
+
+
